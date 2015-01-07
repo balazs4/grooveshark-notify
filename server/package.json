@@ -1,4 +1,5 @@
 {
+  "private" : true,
   "name": "grooveshark-notify-server",
   "description": "Grooveshark Notify Server / Pure node.js",
   "dependencies": {
