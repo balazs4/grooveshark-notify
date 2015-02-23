@@ -1,11 +1,11 @@
 {
-  "private" : true,
+  "private": true,
   "name": "grooveshark-notify-server",
   "description": "Grooveshark Notify Server / Pure node.js",
   "dependencies": {
     "body-parser": "^1.9.2",
+    "date-stylish": "^0.2.0",
     "express": "^4.10.1",
-    "gulp": "^3.8.9",
-    "gulp-notify": "^2.0.0"
+    "node-notifier": "^4.1.2"
   }
 }
