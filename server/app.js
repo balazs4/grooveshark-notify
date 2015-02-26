@@ -5,10 +5,9 @@ var fs = require('fs');
 var http = require('http');
 var path = require('path');
 var os = require('os');
-var datetime = require('date-stylish');
-
-
 var app = express();
+
+require('date-utils');
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -23,6 +22,9 @@ function base64ToImage(raw, callback) {
     });
 }
 
+function dateTimeToFormat(){
+    return new Date().toFormat('YYYY-MM-DD | HH24:MI:SS');
+}
 
 var prevoiousSongId = 0;
 
@@ -40,7 +42,7 @@ app.route('/grooveshark')
 
 
 
-        console.log("[%s] '%s' by '%s' from '%s'", datetime.now, song.songName, song.artistName, song.albumName);
+        console.log("[%s] '%s' by '%s' from '%s'", dateTimeToFormat(), song.songName, song.artistName, song.albumName);
         prevoiousSongId = song.songID;
 
 
@@ -55,5 +57,6 @@ app.route('/grooveshark')
 
 
 var port = 4444;
-app.listen(port);
-console.log("Server is listening on http://" + os.hostname() + ":" + port);
+app.listen(port, function() {
+    console.log("Server is listening on http://" + os.hostname() + ":" + port  + " @ " + dateTimeToFormat());
+});
