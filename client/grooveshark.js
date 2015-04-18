@@ -1,11 +1,9 @@
-function imageTobase64(url, callback, outputFormat)
-{
+function imageTobase64(url, callback, outputFormat) {
     var canvas = document.createElement('CANVAS');
     var ctx = canvas.getContext('2d');
     var img = new Image;
     img.crossOrigin = 'Anonymous';
-    img.onload = function()
-    {
+    img.onload = function() {
         canvas.height = img.height;
         canvas.width = img.width;
         ctx.drawImage(img, 0, 0);
@@ -18,28 +16,15 @@ function imageTobase64(url, callback, outputFormat)
 }
 
 
-function onSongStatusChanged(data)
-{
-    switch (data.status)
-    {
-        case "playing":
-
-            var song = data.song;
-            imageTobase64(song.artURL, function(base64) {
-              song.cover = base64;
-              $.post("http://localhost:4444/grooveshark", song);  
-            });
-
-            break;
-
-        case "paused":
-            console.log("PAUSED");
-            break;
-    }
+function onSongStatusChanged(data) {
+    var song = data.song;
+    imageTobase64(song.artURL, function(base64) {
+        song.cover = base64;
+        $.post("http://localhost:4444/grooveshark", song);
+    });
 }
 
-function registerCallbacks()
-{
+function registerCallbacks() {
     window.Grooveshark.setSongStatusCallback(onSongStatusChanged);
     console.log("Grooveshark callback registered!");
 }
