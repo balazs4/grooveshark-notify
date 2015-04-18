@@ -30,4 +30,4 @@ function registerCallbacks() {
 }
 
 console.log("Injected grooveshark.js");
-setTimeout(registerCallbacks, 8000);
+setTimeout(registerCallbacks, 1000);
