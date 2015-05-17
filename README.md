@@ -1,5 +1,5 @@
-# grooveshark-notify
+# music-streaming-notify
 
-Desktop notification for Grooveshark.
+Desktop notification for Deezer.
 
 ToDo: Finish Readme.md
