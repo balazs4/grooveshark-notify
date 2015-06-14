@@ -1,4 +1,4 @@
-var service = {
+module.exports = {
     name: "deezer",
     getSong: function(raw) {
         return {
@@ -10,9 +10,3 @@ var service = {
         }
     }
 };
-
-module.exports = function(app, notify) {
-    app.post("/" + service.name, function(req, res) {
-        notify(service.getSong(req.body), service.name);
-    });
-}

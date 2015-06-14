@@ -1,10 +1,10 @@
 var app = require('express')();
 var notify = require('./notifier');
 
-require('./bodyparser')(app);
-require('./quickresponse')(app);
+require('./express/bodyparser')(app);
 
-require('./deezer')(app, notify);
-//require('./grooveshark')(app,notify);
+require('./express/quickresponse')(app);
 
-require('./start')(app, 4444);
+require('./services')(app, notify);
+
+require('./express/start')(app, 4444);
