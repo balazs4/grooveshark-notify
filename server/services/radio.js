@@ -12,7 +12,7 @@ module.exports = {
                 "title": raw.source,
                 "artist": "",
                 "album": raw.info,
-                "cover": this.fallbackcover
+                "cover": raw.cover || this.fallbackcover
             }
         } else {
             return {
@@ -20,7 +20,7 @@ module.exports = {
                 "title": raw.title,
                 "artist": raw.artist,
                 "album": raw.album + " (" + raw.source + ")",
-                "cover": this.fallbackcover
+                "cover": raw.cover || this.fallbackcover
             }
         }
 
