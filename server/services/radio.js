@@ -9,9 +9,9 @@ module.exports = {
         if (raw.info) {
             return {
                 "id": md5(raw.info + raw.source),
-                "title": raw.source,
+                "title": raw.info,
                 "artist": "",
-                "album": raw.info,
+                "album": raw.source,
                 "cover": raw.cover || this.fallbackcover
             }
         } else {
