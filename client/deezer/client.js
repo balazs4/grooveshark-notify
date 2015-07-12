@@ -19,7 +19,7 @@ function onSongChange(mutationRecords) {
     var coverUrl = $("#player .player-cover img").attr("src");
 
     imageTobase64(coverUrl, function(base64) {
-        var track = dzPlayer.getCurrentSong();
+        var track = JSON.parse(JSON.stringify(dzPlayer.getCurrentSong()));
         track.ALB_IMG = base64;
         $.post("http://localhost:4444/deezer", track);
     });
