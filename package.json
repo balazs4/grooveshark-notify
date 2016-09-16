@@ -1,0 +1,30 @@
+{
+  "name": "music-streaming-notify",
+  "version": "1.0.0",
+  "description": "Desktop notification for Deezer.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "nssm": "node_modules\\winser\\bin\\nssm.exe",
+    "predeploy": "npm run nssm -- install music-streaming-notify \"C:\\Program Files\\nodejs\\npm.cmd\" start",
+    "deploy": "npm run nssm -- set music-streaming-notify AppDirectory %CD%",
+    "deploy:edit": "npm run nssm -- edit music-streaming-notify",
+    "deploy:start": "npm run nssm -- start music-streaming-notify",
+    "postdeploy": "npm run deploy:edit && npm run deploy:start",
+    "undeploy": "npm run nssm -- remove music-streaming-notify confirm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balazs4/music-streaming-notify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balazs4/music-streaming-notify/issues"
+  },
+  "homepage": "https://github.com/balazs4/music-streaming-notify#readme",
+  "devDependencies": {
+    "winser": "^1.0.2"
+  }
+}
