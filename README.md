@@ -2,7 +2,8 @@
 
 > Desktop notification for Deezer.
 > The album cover art will be saved under %TEMP%\deezer.png and will be shown in the notification area beside the artist, album and song title.
-![Demo][deezer.gif]
+
+![Demo](deezer.gif)
 
 ## Deployment
 ### Client
@@ -25,9 +26,9 @@
 + ``npm start`` if you want to start the server manually
 
 
-##### Windows
+##### Windows only setup
 
-> Deploy as Windows Service
+######  Deploy as Windows Service
 
 + navitage to the root folder (e.g ``cd ..`` if you are in the ``server`` folder)
 + ``npm install``  // yes, just do it again
@@ -36,6 +37,6 @@
 > Hint: cover art will be saved under ``C:\%WINDIR0%\Temp\deezer.png`` 
 
 
-> Desktop Notification
+###### Desktop Notification
 + install [Growl for Windows](http://www.growlforwindows.com/)
 
