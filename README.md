@@ -18,7 +18,7 @@
 [deezer-notify-client] Listening...
 ``
 
-> please note that the extension is deployed as developer extension so you may get an annoying warning from the chrome if restart the chrome
+> please note that the extension is deployed as developer extension so you may get an annoying warning if restart the chrome.
 
 ### Server
 + ``cd server``
