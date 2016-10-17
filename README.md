@@ -1,9 +1,13 @@
 # music-streaming-notify
 
-> Desktop notification for Deezer.
+> Desktop notification for Deezer using [node-notifier](https://github.com/mikaelbr/node-notifier)
 > The album cover art will be saved under %TEMP%\deezer.png and will be shown in the notification area beside the artist, album and song title.
 
 ![Demo](deezer.gif)
+
+## Requirements
++ [node.js](https://nodejs.org)
++ [Notification Library](https://github.com/mikaelbr/node-notifier#requirements)
 
 ## Deployment
 ### Client
@@ -35,7 +39,6 @@
 + ``npm run deploy``
 + configure the windows service if you like
 > Hint: cover art will be saved under ``C:\%WINDIR0%\Temp\deezer.png`` 
-
 
 ###### Desktop Notification
 + install [Growl for Windows](http://www.growlforwindows.com/)
