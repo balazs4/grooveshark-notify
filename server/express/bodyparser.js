@@ -4,4 +4,5 @@ module.exports = function(app) {
         extended: true
     };
     app.use(require('body-parser').urlencoded(options));
+    app.use(require('body-parser').json(options));
 };
